@@ -10,7 +10,7 @@ using Newtonsoft.Json;
 
 namespace ConsoleApp1
 {
-    
+
     public class Settings
     {
         class Program
@@ -22,7 +22,7 @@ namespace ConsoleApp1
 
 
 
-           static FormTypeForm.RootObject getForms()
+            static FormTypeForm.RootObject getForms()
             {
 
                 string url = "https://api.typeform.com/forms";
@@ -63,7 +63,7 @@ namespace ConsoleApp1
                 string outputJson = getJson(url).Result;
                 AnswerTypeForm.RootObject res = JsonConvert.DeserializeObject<AnswerTypeForm.RootObject>(outputJson);
                 return res;
-                
+
             }
 
             async static Task<string> getJson(string url)
@@ -89,13 +89,13 @@ namespace ConsoleApp1
                     {
                         foreach (FormTypeForm.Field sous_question in field.properties.fields)
                         {
-                            Console.WriteLine("Question: " + sous_question.id +" " +sous_question.title);
-                           
+                            Console.WriteLine("Question: " + sous_question.id + " " + sous_question.title);
+
 
                         }
                     }
                 }
-                  
+
             }
 
             static void getNomEntreprises(string id_question)
@@ -111,18 +111,18 @@ namespace ConsoleApp1
 
                         foreach (AnswerTypeForm.Answer answer in field.answers)
                         {
-                            if(answer.field.id == id_question)
+                            if (answer.field.id == id_question)
                             {
                                 if (answer.text != null)
                                 {
-                                    Console.WriteLine("Nom de l' entreprise: " + answer.text+ "landing_id: "+field.landing_id);
+                                    Console.WriteLine("Nom de l' entreprise: " + answer.text + "landing_id: " + field.landing_id);
                                 }
                             }
-                            
+
                         }
                     }
                 }
-                    
+
             }
 
             static string getInfoEntreprise(string landing_id, string id_question)
@@ -135,12 +135,12 @@ namespace ConsoleApp1
 
                         foreach (AnswerTypeForm.Answer answer in field.answers)
                         {
-                            
+
                             if (landing_id == field.landing_id && id_question == answer.field.id)
                             {
                                 if (answer.text != null)
                                 {
-                                    Console.WriteLine(answer.text+ "  " + answer.field.id);
+                                    Console.WriteLine(answer.text + "  " + answer.field.id);
                                     return answer.text;
                                 }
                             }
@@ -162,10 +162,12 @@ namespace ConsoleApp1
                 //info_entreprise.setNom(getInfoEntreprise(landing_id, ""));
 
             }
-       
 
-            
-        static void getEntreprisesRep() {
+
+
+            static List<string> getEntreprisesRep()
+            {
+                List<string> mylist = new List<string>();
                 AnswerTypeForm.RootObject json_answers = getAnswers(id_form);
                 //Console.WriteLine(json_answers.items[0].answers[0].choice.label);
                 if (json_answers.items != null)
@@ -186,7 +188,8 @@ namespace ConsoleApp1
                                 {
                                     if (answer.choice != null)
                                     {
-                                        Console.WriteLine("Réponse: " + answer.choice.label);
+                                       // Console.WriteLine("Réponse: " + answer.choice.label);
+                                        mylist.Add(answer.choice.label);
 
                                     }
 
@@ -194,44 +197,53 @@ namespace ConsoleApp1
                                     {
                                         foreach (string choix in answer.choices.labels)
                                         {
-                                            Console.WriteLine("Réponses: " + choix);
+                                           // Console.WriteLine("Réponses: " + choix);
+                                            mylist.Add(choix);
 
                                         }
                                     }
 
                                     if (answer.text != null)
                                     {
-                                        Console.WriteLine("Réponse: " + answer.text + " id item: " + field.landing_id);
+                                      //  Console.WriteLine("Réponse: " + answer.text /* " id item: " + field.landing_id*/);
+                                        mylist.Add(answer.text);
                                     }
 
                                     if (answer.url != null)
                                     {
-                                        Console.WriteLine("Réponse: " + answer.url);
+                                       // Console.WriteLine("Réponse: " + answer.url);
+                                        mylist.Add(answer.url);
                                     }
 
                                     if (answer.boolean != null)
                                     {
-                                        Console.WriteLine("Réponse: " + answer.boolean);
+                                      //  Console.WriteLine("Réponse: " + answer.boolean);
+
+                                        mylist.Add(answer.boolean.ToString());
                                     }
 
                                     if (answer.number != null)
                                     {
-                                        Console.WriteLine("Réponse: " + answer.number);
+                                      //  Console.WriteLine("Réponse: " + answer.number);
+                                        mylist.Add(answer.number.ToString());
                                     }
 
                                     if (answer.date != null)
                                     {
-                                        Console.WriteLine("Réponse: " + answer.date);
+                                        //Console.WriteLine("Réponse: " + answer.date);
+                                        mylist.Add(answer.date.ToString());
                                     }
 
                                     if (answer.email != null)
                                     {
-                                        Console.WriteLine("Réponse: " + answer.email);
+                                       // Console.WriteLine("Réponse: " + answer.email);
+                                        mylist.Add(answer.email);
                                     }
 
                                     if (answer.file_url != null)
                                     {
-                                        Console.WriteLine("Réponse: " + answer.file_url);
+                                        //Console.WriteLine("Réponse: " + answer.file_url);
+                                        mylist.Add(answer.file_url);
                                     }
 
                                 }
@@ -243,8 +255,8 @@ namespace ConsoleApp1
 
                     }
 
-                    Console.ReadKey();
-                  
+
+
                 }
                 else
                 {
@@ -254,38 +266,48 @@ namespace ConsoleApp1
                 }
 
 
-                
-                
 
 
-            }  
-                
-                
-                
-                
-                
-
-            /*static string rechercher_entreprise(string nom)
-            {
-
-            }*/
-
-
-            static void Main(string[] args)
-            {
-                //RootObject json_forms = getForms().Result;
-
-
-                FormTypeForm.RootObject json_form = getForm(id_form);
-                //   getNomEntreprises(json_form, "");
-                //getEntreprisesRep();
-                //getInfoEntreprise("5f1ccad09db138f184034ce06ba87f74", "KA17sOqFVIRs");
-                //getQuestions();
-                getInfos("5f1ccad09db138f184034ce06ba87f74");
-                //getQuestions();
-                //getNomEntreprises("KA17sOqFVIRs");
-                Console.ReadKey();
+                return mylist;
             }
+
+        
+
+
+
+
+
+
+
+        /*static string rechercher_entreprise(string nom)
+        {
+
+        }*/
+    
+
+
+        static void Main(string[] args)
+        {
+            //RootObject json_forms = getForms().Result;
+
+
+            FormTypeForm.RootObject json_form = getForm(id_form);
+               //List<string> d= getEntreprisesRep();
+
+
+                foreach(string f in getEntreprisesRep())
+                {
+                    Console.WriteLine(f);
+                }
+            //   getNomEntreprises(json_form, "");
+            //getEntreprisesRep();
+            //getInfoEntreprise("5f1ccad09db138f184034ce06ba87f74", "KA17sOqFVIRs");
+            //getQuestions();
+            //   getInfos("5f1ccad09db138f184034ce06ba87f74");
+            //getQuestions();
+            //getNomEntreprises("KA17sOqFVIRs");
+                Console.ReadKey();
         }
+    }
     }
 }
