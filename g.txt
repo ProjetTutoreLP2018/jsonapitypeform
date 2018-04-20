@@ -1,0 +1,135 @@
+Question: KA17sOqFVIRs - Quel est le joli nom de votre organisation ?
+Question: vT94Udur6LMJ - En quelques mots, présentez nous l'activité de {{field:}}
+Question: ke2j3H4gyMFX - Parlez-nous des valeurs et pratiques défendues par {{field:}}
+Question: tSnE2AtCvbha - Son périmètre d'action
+Question: uTsD2ifReBgq - Son ou ses secteurs d'activité
+Question: jnLHDRBh9mUc - Considérez-vous que {{field:}}  appartienne à l'Économie Sociale et Solidaire (ESS) ?
+Question: qpk3VRSEbtXR - Quel est le stade de développement de {{field:}} ?
+Question: BDmQoDqmH8RW - Votre organisation est en cours de création, merci d'indiquer les éléments prévisionnels suivants
+Question: f3w8Ii7p0VOa - Date de création de {{field:}}
+Question: bWUfRAYhdsx4 - Reconnaissance ou agrément obtenu par {{field:}}
+Question: gvkiTAtWDLkY - Combien de bénéficiaires / client·es profitent chaque année de l'activité de {{field:}} ?
+Question: AKO7wyDZgRBQ - Indiquez l'adresse du super site internet de {{field:}}
+Question: mLxFMwNNEIHh - Le statut actuel de {{field:}}
+Question: LwLDUTsoTBVK - Précisez le statut coopératif de {{field:}}
+Question: rLCJ9PsJ6sE3 - Précisez le statut de la {{field:}} {{field:}}
+Question: ex044se03tDA - Précisez le statut commercial de {{field:}}
+Question: heTubNAydq3H - L'association {{field:}} est-elle fiscalisée ?
+Question: m8M9bxnoSt2M - En comptabilité
+Question: nRsWLFWXC7Uq - En juridique
+Question: LYYWK6iNmevB - En RH
+Question: utrTfBtpiKId - En informatique
+Question: q3YszEPwOM6F - Expérience entrepreneuriale ou associative
+Question: btzcNRAx18k3 - Salarié·e
+Question: ewxi2rV8MiUY - Contrat d'apprentissage ou de professionnalisation
+Question: mUZVq1pB6qPM - Stagiaire
+Question: c5jmF4kpFVuq - Service civique
+Question: p12JSL5DY9F6 - Bénévole
+Question: CtcjfJpuFM2p En comptabilité
+Question: gCR3GxRVYWQ3 En gestion
+Question: yrxBmgbHDgct En fiscalité
+Question: bfyd1jJxP8H7 - Adresse 1
+Question: E6Pn0cqLx2Dq - Adresse 2
+Question: gxrPRaKSzYpd - Code Postal
+Question: U7ezEa0RKVs9 - Commune
+Question: S8LVVheHTFP2 - Nom
+Question: cCIgtabVm6XW - Prénom
+Question: iUWCBeGpSaFB - Téléphone fixe
+Question: ayrojLe06MRf - Téléphone portable
+Question: Tedy3ZeXYKx7 - Email
+Question: TkBGskbttcCB - Souhaitez-vous nous communiquer les coordonnées d'une seconde personne chez {{field:}}
+Question: mRz70S6zA9Yx - Nom
+Question: ffJNhpNdAScE - Prénom
+Question: b4II2N5DnO3k - Téléphone fixe
+Question: czrYyGxepGx6 - Téléphone portable
+Question: qfDXvgTDYFit - Email
+Question: b8RnVdQwe5ft - Comment avez-vous connu FINACOOP ?
+Question: HidmYDYwat9o Qu'est-ce qui vous attire dans le projet de FINACOOP ?
+Question: WsvJjioLHcll - Envisagez-vous de devenir un·e heureux·se sociétaire de FINACOOP ?
+Question: QOHi1qGOPWQv - Ce formulaire, vous l'avez aimé comment ?
+Question: RrPVEsv2iaQh - Un commentaire, un poème à nous faire ?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+KA17sOqFVIRs
+vT94Udur6LMJ
+ke2j3H4gyMFX
+tSnE2AtCvbha
+uTsD2ifReBgq
+jnLHDRBh9mUc
+qpk3VRSEbtXR
+BDmQoDqmH8RW
+f3w8Ii7p0VOa
+bWUfRAYhdsx4
+gvkiTAtWDLkY
+AKO7wyDZgRBQ
+mLxFMwNNEIHh
+LwLDUTsoTBVK
+rLCJ9PsJ6sE3
+ex044se03tDA
+heTubNAydq3H
+m8M9bxnoSt2M
+nRsWLFWXC7Uq
+LYYWK6iNmevB
+utrTfBtpiKId
+q3YszEPwOM6F
+btzcNRAx18k3
+ewxi2rV8MiUY
+mUZVq1pB6qPM
+c5jmF4kpFVuq
+p12JSL5DY9F6
+CtcjfJpuFM2p
+gCR3GxRVYWQ3
+yrxBmgbHDgct
+bfyd1jJxP8H7
+E6Pn0cqLx2Dq
+gxrPRaKSzYpd
+U7ezEa0RKVs9
+S8LVVheHTFP2
+cCIgtabVm6XW
+iUWCBeGpSaFB
+ayrojLe06MRf
+Tedy3ZeXYKx7
+TkBGskbttcCB
+mRz70S6zA9Yx
+ffJNhpNdAScE
+b4II2N5DnO3k
+czrYyGxepGx6
+qfDXvgTDYFit
+b8RnVdQwe5ft
+HidmYDYwat9o
+WsvJjioLHcll
+QOHi1qGOPWQv
+RrPVEsv2iaQh
