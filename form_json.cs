@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace FormTypeForm
 {
-    
 
-    
+
+
 
     public class Image
     {
@@ -21,9 +21,9 @@ namespace FormTypeForm
         public Image image { get; set; }
     }
 
-    
 
-    
+
+
 
     public class Attachment
     {
@@ -31,7 +31,7 @@ namespace FormTypeForm
         public string href { get; set; }
     }
 
-    
+
 
     public class Choice
     {
@@ -68,7 +68,7 @@ namespace FormTypeForm
         public string shape { get; set; }
     }
 
-   
+
     public class Field
     {
         public string id { get; set; }
@@ -79,13 +79,13 @@ namespace FormTypeForm
         public string type { get; set; }
     }
 
-    
+
 
     public class RootObject
     {
         public string id { get; set; }
         public string title { get; set; }
         public List<Field> fields { get; set; }
-        
+
     }
 }
