@@ -21,7 +21,7 @@ namespace ConsoleApp1
         private string secteur;
         private string stade_developpement;
         private string element_previsionnel;
-        private string date_creation;
+        private DateTime date_creation;
         private string reconnaissance;
         private string clients;
         private string adresse;
@@ -93,5 +93,33 @@ namespace ConsoleApp1
             }
             
         }
+        public string getSecteur()
+        {
+            return this.secteur;
+        }
+        public string getPerimetre()
+        {
+            return this.perimetre;
+        }
+        public DateTime getdate()
+        {
+            return this.date_creation;
+        }
+        public void setSecteurEntreprise(List<string> reponses) {
+            if (reponses != null)
+                this.secteur = reponses[0];
+       }
+        public void setPerimetreEntreprise(List<string> reponses)
+        {
+            if (reponses != null)
+                this.perimetre = reponses[0];
+        }
+      /*  public void setDateEntreprise(List<String> reponses)
+        {
+            if (reponses != null)
+                this.date_creation = reponses[0];
+        }*/
+
+
     }
 }

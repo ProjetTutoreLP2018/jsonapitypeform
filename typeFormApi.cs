@@ -15,12 +15,12 @@ namespace ConsoleApp1
         static string id_question_nom_entreprise = "KA17sOqFVIRs";
         string id_question_activite = "vT94Udur6LMJ";
         string id_question_valeurs_entreprise = "vT94Udur6LMJ";
-        string id_question_perimetre = "tSnE2AtCvbha";
-        string id_question_secteur = "uTsD2ifReBgq";
+        static  string id_question_perimetre = "tSnE2AtCvbha";
+        static string id_question_secteur = "uTsD2ifReBgq";
         string id_question_ess = "jnLHDRBh9mUc";
         string id_question_stade_developpement = "qpk3VRSEbtXR";
-        string id_question_element_previsionnels = "qpk3VRSEbtXR";
-        string id_question_date_creation = "f3w8Ii7p0VOa";
+     //   string id_question_element_previsionnels = "";
+        static string id_question_date_creation = "f3w8Ii7p0VOa";
         string id_question_reconnaissance = "bWUfRAYhdsx4";
         string id_question_clients = "gvkiTAtWDLkY";
         string id_question_adresse = "AKO7wyDZgRBQ";
@@ -213,9 +213,13 @@ namespace ConsoleApp1
 
             ConsoleApp1.InfoEntreprise info_entreprise = new ConsoleApp1.InfoEntreprise();
             info_entreprise.setNomEntreprise(getEntreprisesRep(landing_id, id_question_nom_entreprise));
+            info_entreprise.setSecteurEntreprise(getEntreprisesRep(landing_id, id_question_secteur));
+            info_entreprise.setPerimetreEntreprise(getEntreprisesRep(landing_id, id_question_perimetre));
+           // info_entreprise.setDateEntreprise(getEntreprisesRep(landing_id, id_question_date_creation));
             //A finir
             return info_entreprise;
         }
+       
 
 
         /*
