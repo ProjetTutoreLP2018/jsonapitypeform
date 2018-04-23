@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,7 +22,7 @@ namespace ConsoleApp1
         private string secteur;
         private string stade_developpement;
         private string element_previsionnel;
-        private DateTime date_creation;
+        private string date_creation;
         private string reconnaissance;
         private string clients;
         private string adresse;
@@ -101,9 +102,9 @@ namespace ConsoleApp1
         {
             return this.perimetre;
         }
-        public DateTime getdate()
+        public DateTime getDate()
         {
-            return this.date_creation;
+            return DateTime.ParseExact(date_creation, "dd/MM/yyyy HH:mm:ss", CultureInfo.InvariantCulture);
         }
         public void setSecteurEntreprise(List<string> reponses) {
             if (reponses != null)
@@ -114,11 +115,14 @@ namespace ConsoleApp1
             if (reponses != null)
                 this.perimetre = reponses[0];
         }
-      /*  public void setDateEntreprise(List<String> reponses)
+       public void setDateEntreprise(List<string> reponses)
         {
             if (reponses != null)
+            {
                 this.date_creation = reponses[0];
-        }*/
+            }
+                
+        }
 
 
     }

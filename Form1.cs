@@ -39,37 +39,43 @@ namespace lot1api
 
         }
 
-        private void bValide_Click(object sender, EventArgs e)
-        {
-            Task.Run(() => {
-                typeFormApi.json_answers = getAnswers(typeFormApi.id_form);
-                InfoEntreprise info = typeFormApi.getInfos("5f1ccad09db138f184034ce06ba87f74");
-                nomEntreprise.Text = info.getNom();
-                loc.Text = info.getPerimetre();
-                Dep.Text = info.getPerimetre(); });
-
-            Thread demoThread =
-         new Thread(new ThreadStart(this.ThreadProcUnsafe));
-
-            demoThread.Start();
-            //  Console.WriteLine(nomEntreprise.Text);
-
-
-
-        }
-        private void ThreadProcUnsafe()
+        private async void bValide_Click(object sender, EventArgs e)
         {
             
-            this.nomEntreprise.Text = "This text was set unsafely.";
+            typeFormApi.json_answers = await getAnswers(typeFormApi.id_form);
+            InfoEntreprise info = typeFormApi.getInfos("65bc77c7c67c4297e8d6741c00d4c8ed");
+            nomEntreprise.Text = info.getNom();
+            if(info.getPerimetre() == "Départemental")
+            {
+                Dep.Checked = true;
+            }
+            else if(info.getPerimetre() == "Local")
+            {
+                Dep.Checked = true;
+            }
+            else if (info.getPerimetre() == "National")
+            {
+                Dep.Checked = true;
+            }
+
+            date_creation.Value = info.getDate();
+
+
+            secteurs_textbox.Text = info.getSecteur();
+            //date_creation = info.getDate();
+
+
+
         }
-        public static AnswerTypeForm.RootObject getAnswers(string id_form)
+      
+        public async static Task<AnswerTypeForm.RootObject> getAnswers(string id_form)
         {
 
 
             string url = "https://api.typeform.com/forms/" + id_form + "/responses";
 
 
-            string outputJson = getJson(url).Result;
+            string outputJson = await getJson(url);
             AnswerTypeForm.RootObject res = JsonConvert.DeserializeObject<AnswerTypeForm.RootObject>(outputJson);
             return res;
 

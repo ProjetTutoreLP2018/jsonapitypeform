@@ -40,8 +40,8 @@
             this.loc = new System.Windows.Forms.RadioButton();
             this.Dep = new System.Windows.Forms.RadioButton();
             this.Nat = new System.Windows.Forms.RadioButton();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.date_creation = new System.Windows.Forms.DateTimePicker();
+            this.secteurs_textbox = new System.Windows.Forms.TextBox();
             this.bValide = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -156,20 +156,21 @@
             this.Nat.Text = "National";
             this.Nat.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // date_creation
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(239, 348);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(291, 20);
-            this.dateTimePicker1.TabIndex = 18;
+            this.date_creation.CustomFormat = "dd/MM/yy  HH:mm:ss";
+            this.date_creation.Location = new System.Drawing.Point(239, 348);
+            this.date_creation.Name = "date_creation";
+            this.date_creation.Size = new System.Drawing.Size(291, 20);
+            this.date_creation.TabIndex = 18;
             // 
-            // textBox2
+            // secteurs_textbox
             // 
-            this.textBox2.Location = new System.Drawing.Point(239, 250);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(302, 45);
-            this.textBox2.TabIndex = 19;
+            this.secteurs_textbox.Location = new System.Drawing.Point(239, 250);
+            this.secteurs_textbox.Multiline = true;
+            this.secteurs_textbox.Name = "secteurs_textbox";
+            this.secteurs_textbox.Size = new System.Drawing.Size(302, 45);
+            this.secteurs_textbox.TabIndex = 19;
             // 
             // bValide
             // 
@@ -187,8 +188,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(827, 550);
             this.Controls.Add(this.bValide);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.secteurs_textbox);
+            this.Controls.Add(this.date_creation);
             this.Controls.Add(this.Nat);
             this.Controls.Add(this.Dep);
             this.Controls.Add(this.loc);
@@ -221,8 +222,8 @@
         private System.Windows.Forms.RadioButton loc;
         private System.Windows.Forms.RadioButton Dep;
         private System.Windows.Forms.RadioButton Nat;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.DateTimePicker date_creation;
+        private System.Windows.Forms.TextBox secteurs_textbox;
         private System.Windows.Forms.Button bValide;
     }
 }
